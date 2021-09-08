@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 8080;
 const app = express();
 
 app.use(express.json());
-app.use("/", hotDogRouter);
+app.use("/hotDog", hotDogRouter);
 
 // app.get("/", (req, res) => {
 //   res.send("NODEMON WORK!");
