@@ -4,7 +4,10 @@ const pool = new Pool({
   password: "root",
   host: "localhost",
   port: 5434,
-  database: "hot_dog",
+  connectionString: isProduction ? process.env.DATABASE_URL : connectionString,
+  // ssl: {
+  //   rejectUnauthorized: false,
+  // },
 });
 
 module.exports = pool;
